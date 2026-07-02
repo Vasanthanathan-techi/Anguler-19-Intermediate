@@ -19,7 +19,7 @@
  <app-side-bar></app-side-bar>  
 </nav>
 <main [class]="classname+'text-green-700'" id="">
-  Name <input type="text" class="border" [value]="name" (change)="onChange($event)">
+  Name <input type="text" class="border" [(ngModel)]="name">
   {{name}}
 </main>
 
