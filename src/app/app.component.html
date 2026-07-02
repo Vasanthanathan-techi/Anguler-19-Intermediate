@@ -19,7 +19,7 @@
  <app-side-bar></app-side-bar>  
 </nav>
 <main [class]="classname+'text-green-700'" id="">
-  Name <input type="text" class="border" [value]="name">
+  Name <input type="text" class="border" [value]="name" (change)="onChange($event)">
   {{name}}
 </main>
 

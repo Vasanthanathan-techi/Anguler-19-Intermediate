@@ -13,6 +13,9 @@ import { SideBarComponent } from '../shared/side-bar/side-bar.component';
 export class AppComponent {
 classname='p-5 text-6xl';
 name='vasanthanathan';
+onChange($e: Event){
+   this.name=($e.target as HTMLInputElement).value;
+}
 
   }
 
