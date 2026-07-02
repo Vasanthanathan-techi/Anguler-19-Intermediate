@@ -11,12 +11,8 @@ import { SideBarComponent } from '../shared/side-bar/side-bar.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-hasError =false;
-user={
-  name:'vasanth',
-  gender:'m',
-
-};
+classname='p-5 text-6xl';
+name='vasanthanathan';
 
   }
 

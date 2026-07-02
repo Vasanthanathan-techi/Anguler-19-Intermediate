@@ -18,10 +18,9 @@
  text-emerald-50 py-5" >
  <app-side-bar></app-side-bar>  
 </nav>
-<main class="p-5 text-6xl {{hasError?'text-red-200':'text-green-200'}}">
-    {{user.name}}
-    <br/>
-    {{user.gender==='m'?'male':'female'}}
+<main [class]="classname+'text-green-700'" id="">
+  Name <input type="text" class="border" [value]="name">
+  {{name}}
 </main>
 
 </section>
