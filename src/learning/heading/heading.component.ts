@@ -1,4 +1,4 @@
-import { Component, Input, input } from '@angular/core';
+import { Component, EventEmitter, Input, input, Output, output } from '@angular/core';
 import { User } from '../../shared/models/user.model';
 
 @Component({
@@ -10,4 +10,15 @@ import { User } from '../../shared/models/user.model';
 export class HeadingComponent {
 @Input('heading')    title ='Default  Title';
 @Input() user:User | undefined={name:'',gender:'',age:0};
+
+
+@Output() success:EventEmitter<User>=new EventEmitter();
+@Output() failure:EventEmitter<{error:String}>=new EventEmitter();
+
+onSubmit(){
+  if(this.user)this .user.name='vasantha nathan kumaran';
+
+this.success.emit(this.user);
+}
+
 }

@@ -20,5 +20,12 @@ export class AppComponent {
     gender:'m',
     age:30,
   };
+  onSucces($e:User){
+    this.user=$e;
+
+  }
+  onFailuere($e:{error:String}){
+    console.log($e)
+  }
   }
 

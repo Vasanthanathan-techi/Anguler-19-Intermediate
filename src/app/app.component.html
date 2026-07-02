@@ -20,7 +20,13 @@
 </nav>
 <main class="p-5">
 
-  <app-heading [heading]="'Heading'"></app-heading>
+  <app-heading  [user]="user"    heading="Heading" 
+  (success)="onSucces($event)"
+   (failure)="onFailuere($event)"
+  ></app-heading>
+<p class="mt-12 text-2xl">
+  From parent -{{user.name}}
+</p>
 </main>
 
 </section>
