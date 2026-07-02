@@ -11,5 +11,12 @@ import { SideBarComponent } from '../shared/side-bar/side-bar.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'app';
-}
+hasError =false;
+user={
+  name:'vasanth',
+  gender:'m',
+
+};
+
+  }
+
