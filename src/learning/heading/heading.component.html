@@ -1,7 +1,3 @@
-<h1>{{title}}</h1>
-{{user?.name}}
-<button class="border px-3 py-1 rounded-md"  (click)="onSubmit()">submit</button>
-<button class="border px-3 py-1 rounded-md"  (click)="failure.emit({error:'some error'})">Error</button>
+{{user.name}}
 
-
- 
+<ng-content></ng-content>

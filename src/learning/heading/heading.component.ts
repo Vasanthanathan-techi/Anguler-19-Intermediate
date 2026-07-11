@@ -1,24 +1,58 @@
-import { Component, EventEmitter, Input, input, Output, output } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, EventEmitter, Input, input, OnChanges, OnDestroy, OnInit, Output, output, SimpleChanges } from '@angular/core';
 import { User } from '../../shared/models/user.model';
+import { ɵEmptyOutletComponent } from "@angular/router";
 
 @Component({
   selector: 'app-heading',
-  imports: [],
+  imports: [ɵEmptyOutletComponent],
   templateUrl: './heading.component.html',
   styleUrl: './heading.component.css'
 })
-export class HeadingComponent {
-@Input('heading')    title ='Default  Title';
-@Input() user:User | undefined={name:'',gender:'',age:0};
+//,,AfterContentInit,AfterContentChecked
+export class HeadingComponent implements OnInit,OnChanges,DoCheck,AfterContentInit,AfterContentChecked,AfterViewInit,AfterViewChecked, OnDestroy{
+  
+ 
+ @Input('user') user:any =undefined;
+ @Input('manager') manager: any =undefined;
 
+  ngOnChanges({manager}: SimpleChanges): void {
+    console.log(manager);
+  }
+  
 
-@Output() success:EventEmitter<User>=new EventEmitter();
-@Output() failure:EventEmitter<{error:String}>=new EventEmitter();
+ 
+  ngOnInit(): void {
+    console.log('From on init')
+  }
+   ngDoCheck(): void {
+     console.log('Docheck called');
+   }
 
-onSubmit(){
-  if(this.user)this .user.name='vasantha nathan kumaran';
+   ngAfterContentInit(): void {
+    console.log('After content init method  called');
+  }
 
-this.success.emit(this.user);
-}
+    ngAfterContentChecked(): void {
+    console.log('After Content Checked method called');
+  }
+
+     ngAfterViewInit(): void {
+  console.log('After view Init called');
+  }
+  
+   ngAfterViewChecked(): void {
+     console.log('After view checked');
+   }
+  
+   ngOnDestroy(): void {
+    console.log('on destroy called');
+   }
+ 
+
+ 
+
+  
+ 
+
 
 }

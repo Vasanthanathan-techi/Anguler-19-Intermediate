@@ -19,15 +19,11 @@
  
  <app-side-bar></app-side-bar>  
 </nav>
-<main class="p-5">
-
-  <app-heading  [user]="user"    heading="Heading" 
-  (success)="onSucces($event)"
-   (failure)="onFailuere($event)"
-  ></app-heading>
-<p class="mt-12 text-2xl">
-  From parent -{{user.name}}
-</p>
+<main class="p-5" *ngIf="showHeading">
+<app-heading  [user]="user" [manager]="user">
+    <p>This is dynamicaly from parent</p>
+</app-heading>
+ 
 </main>
 
 </section>
