@@ -18,11 +18,10 @@
  text-emerald-50 py-5" >
  
  <app-side-bar></app-side-bar>  
+ 
 </nav>
-<main class="p-5" *ngIf="showHeading">
-<app-heading  [user]="user" [manager]="user">
-    <p>This is dynamicaly from parent</p>
-</app-heading>
+<main class="p-5">
+<router-outlet></router-outlet>
  
 </main>
 
