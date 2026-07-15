@@ -14,7 +14,7 @@ export class TestComponent {
         {name:'megha',age:2},
   ];
 
-  type: 'KIDS' |'ELDERS' | any ='asdas';
+  type: 'KIDS' |'ELDERS'='ELDERS';
 
   getkids(){
     return this.family.filter(x=>x.age<13);
