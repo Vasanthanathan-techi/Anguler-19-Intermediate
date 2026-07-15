@@ -1,0 +1,19 @@
+<!-- @if (!name){
+
+    Test
+
+}@else{
+    <p>My name is :{{name}}</p>
+} -->
+    @if(getkids();as kids){
+        @if(kids.length>0){
+        <div class="bg-green-200 p-5 rounded-4xl">
+        <h1>kid Details</h1>
+       <p>{{kids[0].name}}</p>
+          <p>{{kids[1].name}}</p>
+       </div>
+    }@else {
+        No kids found 
+    }
+
+}@else if () {}
