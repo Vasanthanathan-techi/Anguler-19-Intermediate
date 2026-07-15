@@ -5,7 +5,7 @@
 }@else{
     <p>My name is :{{name}}</p>
 } -->
-    @if(getkids();as kids){
+    <!-- @if(getkids();as kids){
         @if(kids.length>0){
         <div class="bg-green-200 p-5 rounded-4xl">
         <h1>kid Details</h1>
@@ -16,4 +16,45 @@
         No kids found 
     }
 
-}@else if () {}
+}@ if (getelder();as elders) {
+ @if(elders.length>0){
+<div class="bg-green-200 p-5 rounded-4xl">
+        <h1>Elders Details</h1>
+       <p>{{elders[0].name}}</p>
+          <p>{{elders[1].name}}</p>
+       </div>
+    }
+} -->
+
+<!-- @switch (type) {
+    @case ('KIDS') {
+        @if(getkids();as kids){
+        @if(kids.length>0){
+        <div class="bg-green-200 p-5 rounded-4xl">
+        <h1>kid Details</h1>
+       <p>{{kids[0].name}}</p>
+          <p>{{kids[1].name}}</p>
+       </div>
+    }@else {
+        'No kids found'
+    }
+
+    }
+}
+    @case ('ELDERS') {
+ @if (getelder();as elders) {
+ @if(elders.length>0){
+<div class="bg-green-200 p-5 rounded-4xl">
+        <h1>Elders Details</h1>
+       <p>{{elders[0].name}}</p>
+          <p>{{elders[1].name}}</p>
+       </div>
+    }
+}
+}
+    
+    @default {
+        
+        No Details Found
+    }
+} -->

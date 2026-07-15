@@ -10,9 +10,11 @@ export class TestComponent {
   family =[
      {name:'nathan vasanth',age:30},
       {name:'jasmine',age:18},
-      //  {name:'sam',age:6},
-      //   {name:'megha',age:2},
+        {name:'sam',age:6},
+        {name:'megha',age:2},
   ];
+
+  type: 'KIDS' |'ELDERS' | any ='asdas';
 
   getkids(){
     return this.family.filter(x=>x.age<13);
