@@ -10,10 +10,10 @@ import { SideBarItemComponent } from './side-bar-item/side-bar-item.component';
 export class SideBarComponent {
 
  routes =[
-  {name:'Home',path:'/'},
-  {name:'Notes', path:'/notes'},
-  {name:'Trash',path:'/trash'},
-
+  {path:['/'],name:'Home',},
+{path:['/','notes'],name:'notes'},
+{path:['/','trash'],name:'trash'},
+{path:['/','test'],name:'Test',}
 ];
 
 }
